@@ -1,6 +1,6 @@
 # Bin2Dec
 
-Project ideia from [floripop17/app-ideias](https://github.com/facebook/create-react-app).
+Project ideia from [floripop17/app-ideias](https://github.com/florinpop17/app-ideas).
 
 ## Project scope
 
