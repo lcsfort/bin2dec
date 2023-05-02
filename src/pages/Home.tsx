@@ -14,25 +14,29 @@ function Home() {
       <OldTv>
         <h1 className="text-view">{isValid ? bin2dec(value) : 0}</h1>
       </OldTv>
-      <div className="input-box">
-        <div className="input-container">
-          <input
-            autoFocus
-            type="text"
-            onChange={(event) => {
-              const binNumb = event.target.value;
+      <div className="input-container">
+        <input
+          autoFocus
+          type="text"
+          onChange={(event) => {
+            const binNumb = event.target.value;
 
-              const isValidBin = isValidBinaryNumber(binNumb);
+            const isValidBin = isValidBinaryNumber(binNumb);
 
-              setIsValid(isValidBin);
-              setValue(binNumb);
-            }}
-          />
-        </div>
-        {value.trim() !== "" && !isValid && (
-          <label>Please type a valid binary number. E.g. 11111001100</label>
-        )}
+            setIsValid(isValidBin);
+            setValue(binNumb);
+          }}
+        />
       </div>
+      {value.trim() !== "" && !isValid && (
+        <label
+          style={{
+            marginTop: "8px",
+          }}
+        >
+          Please type a valid binary number. E.g. 11111001100
+        </label>
+      )}
     </div>
   );
 }
